@@ -27,7 +27,7 @@ public class IgniteConfig {
     public IgniteConfiguration igniteConfiguration(@Value("property.key") String serverIp){
 		logger.getLogger("org").setLevel(Level.INFO);
        logger.info("Ip:"+serverIp);
-       serverIp = "192.168.1.13";
+       serverIp = "localhost";
 		TcpDiscoverySpi discoverySpi = new TcpDiscoverySpi();
 		discoverySpi.setLocalPort(47500);
 		TcpDiscoveryVmIpFinder ipFinder = new TcpDiscoveryVmIpFinder();
